@@ -1,6 +1,17 @@
 class User < ApplicationRecord
+  # Virtual attribute for authenticating by either username or email
+  # This is in addition to a real persisted field like 'username'
+
   enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?
+
+  validates :username,
+    :presence => true,
+    :uniqueness => {
+      :case_sensitive => false
+  }
+  
+  validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
 
   def set_default_role
     self.role ||= :user

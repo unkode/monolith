@@ -1,0 +1,5 @@
+# Application main variables
+app:
+  name_compact: 'MONOLITH'
+  name_extended: 'M O N O L I T H'
+

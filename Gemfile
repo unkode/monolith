@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
 end
 ruby '2.3.3'
 gem 'rails', '~> 5.0.1'
+gem 'config'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -22,7 +23,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'foundation-rails', '~> 5.5'
 gem 'mysql2', '~> 0.3.18'
