@@ -11,20 +11,34 @@
   padding: 0 15px; 
 }
 
+// Some generic overrides 
+.column {
+  border: 5px solid #466d98;
+}
+
+.row {
+  border: 10px solid #466d98;
+}
+
+pre {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
 // Custom alert box for Devise
-.alert-devise /*#error_explanation:not(:empty)*/ {
-  //@extend .alert-box;
-  //@extend .alert;
+.alert-devise #error_explanation:not(:empty) {
   @extend #errorExplanation
 }
 
 #errorExplanation {
-  border: 0px;
+  border: 10px;
   padding: 7px;
-  padding-bottom: 12px;
+  padding-bottom: 5px;
   margin-bottom: 20px;
-  background-color: #500;
-  color: #fff;
+  background-color: $alert-color;
 }
 
 #errorExplanation h2 {
@@ -33,14 +47,14 @@
   padding: 5px 5px 5px 15px;
   font-size: 12px;
   margin: -7px;
-  background-color: #e00;
-  // color: #fff;
+  background-color: lighten($alert-color, 30%);
 }
 
 #errorExplanation p {
+  color: #0000ff;
   margin-bottom: 0;
+  padding-bottom: 15px;
   padding: 5px;
-  //color: white;
 }
 
 #errorExplanation ul li {

@@ -13,6 +13,9 @@ Rails.application.configure do
   config.consider_all_requests_local = true
 
   # Enable/disable caching. By default caching is disabled.
+  config.assets.cache_store = :null_store  # Disables the Asset cache
+  config.sass.cache = false  # Disable the SASS compiler cache
+
   if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true
 

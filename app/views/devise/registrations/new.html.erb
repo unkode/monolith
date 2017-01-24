@@ -1,30 +1,30 @@
-<div class="large-centered row">
-  <div class="panel large-4 column">
-    <h3>Create your user</h3>
+<div class="row">
+  <div class="panel small-6 large-centered column">
+    <h3 class="text-center">Create a new user</h3>
     <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :role => 'form'}) do |f| %>
     <div class="alert-devise">
       <%= devise_error_messages! %>
     </div>
-    <div class="form-group">
+    <div>
       <%= f.label :username %>
       <%= f.text_field :username, :autofocus => true, class: 'form-control' %>
     </div>
-    <div class="form-group">
+    <div>
       <%= f.label :email %>
       <%= f.email_field :email, class: 'form-control' %>
     </div>
-    <div class="form-group">
+    <div>
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
       <%= f.label :password_confirmation %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
     </div>
-    <%= f.submit 'Sign up', :class => 'button right' %>
-  <% end %>
-</div>
-<div class="panel large-6 column">
-  <%= render :partial => "text_tips" %>
-</div>  
+      <%= f.submit 'Sign up', :class => 'button right' %>
+    <% end %>
+  </div>    
+  <div class="panel small-6 large-centered column">
+    <%= render :partial => "text_tips" %>
+  </div>  
 </div>
 
 

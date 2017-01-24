@@ -24,7 +24,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 gem 'devise'
-gem 'foundation-rails', '~> 5.5'
+gem 'foundation-rails'#, '~> 5.5'
+gem 'foundation_rails_helper', '>= 3.0.0.rc2', '< 4.0'
 gem 'mysql2', '~> 0.3.18'
 gem 'therubyracer', :platform=>:ruby
 group :development do
