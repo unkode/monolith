@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Monolith" %></title>
+    <%= render 'application/favicon' %>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Monolith" %>">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
     <%# Modernizr is required for Zurb Foundation %>
@@ -12,7 +13,9 @@
   </head>
   <body>
     <header>
-      <%= render 'layouts/navigation' %>
+      <% unless controller_name == "visitors" %>
+        <%= render 'layouts/navigation' %>
+      <% end %>
     </header>
     <main role="main">
        <%= render 'layouts/messages' %>
