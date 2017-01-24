@@ -10,8 +10,12 @@ class User < ApplicationRecord
     :uniqueness => {
       :case_sensitive => false
   }
+
+  # Validate username valdity and password complexity
   
-  validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
+  validates_format_of :username, with: /^[a-zA-Z0-9_\-\.]*$/, :multiline => true
+  validates_format_of :password, with: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d). /, :multiline => true
+  
 
   def set_default_role
     self.role ||= :user
