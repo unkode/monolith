@@ -1,23 +1,13 @@
 // import the CSS framework
 @import "foundation";
-// override for the 'Home' navigation link
-.top-bar .name {
-  font-size: rem-calc(13);
-  line-height: 45px; 
-}
-.top-bar .name a {
-  font-weight: normal;
-  color: #e8e8e8;
-  padding: 0 15px; 
+
+// top-bar customizations
+.top-bar {
+  border: 1px solid #00FFFF;
 }
 
-// Some generic overrides 
-.column {
-  border: 5px solid #466d98;
-}
-
-.row {
-  border: 10px solid #466d98;
+.top-bar-left {
+  border: 1px solid #FF0000;
 }
 
 pre {

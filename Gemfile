@@ -26,6 +26,8 @@ end
 gem 'devise'
 gem 'foundation-rails'#, '~> 5.5'
 gem 'foundation_rails_helper', '>= 3.0.0.rc2', '< 4.0'
+gem 'modernizr-mixin'
+gem 'modernizr-rails'
 gem 'mysql2', '~> 0.3.18'
 gem 'therubyracer', :platform=>:ruby
 group :development do

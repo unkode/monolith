@@ -12,6 +12,9 @@ Rails.application.configure do
   # Show full error reports.
   config.consider_all_requests_local = true
 
+  # log levels
+  config.log_level = :debug # In any environment initializer, or
+
   # Enable/disable caching. By default caching is disabled.
   config.assets.cache_store = :null_store  # Disables the Asset cache
   config.sass.cache = false  # Disable the SASS compiler cache
