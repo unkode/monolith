@@ -1,4 +1,8 @@
-<div class="title-bar" id="title-bar-content">
+
+
+
+
+<div class="title-bar">
   <span ><%= Settings.app.name_extended %></span>
 </div>
 
@@ -7,9 +11,9 @@
     <div id="responsive-menu">
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
-          <li>
-            <button class="dropdown button expanded" id="menu-button">&#9776;</button>
-            <ul class="dropdown menu">
+          <li class="is-dropdown-submenu-parent">
+            <button class="dropdown button expanded">&#9776;</button>
+            <ul class="vertical menu">
               <%= render :partial => 'layouts/navigation_menu' %>
             </ul>
           </li>

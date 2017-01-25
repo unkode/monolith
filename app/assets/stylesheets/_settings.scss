@@ -81,6 +81,14 @@ $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
 
+// Z-Indexes for some control ontainers
+$z-index-title-bar: -30;
+$z-index-top-bar: 10;
+$z-index-page-container: 1;
+$z-index-dropdown: 99;
+$z-index-cards: 5;
+
+
 @include add-foundation-colors;
 
 // 2. Breakpoints
@@ -627,3 +635,5 @@ $topbar-title-spacing: 0.5rem 0.5rem 0.5rem 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
 $topbar-height-rem: 2.5rem;
+
+
