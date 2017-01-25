@@ -8,18 +8,21 @@
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
           <li>
-          <div href="#" class="menu-icon top-bar-dropdown-button">Menu</div>
-          <ul class="menu vertical">
-            <%= render :partial => 'layouts/navigation_menu' %>
-          </ul>
+            <button class="dropdown button expanded" id="menu-button">&#9776;</button>
+            <ul class="dropdown menu">
+              <%= render :partial => 'layouts/navigation_menu' %>
+            </ul>
           </li>
         </ul>
       </div>
+      <div class="top-bar-search">
+        <div id="div-padding">
+          <input type="search" />
+          <input class="button" id="menu-button" type="submit" value="GO" />
+        </div>
       </div>
       <div class="top-bar-right">
         <ul class="menu">
-          <li><input type="search" placeholder="Search"></li>
-          <li><button type="button" class="button">Search</button></li>
           <%= render :partial => 'layouts/navigation_auth' %>
         </ul>
       </div>

@@ -328,16 +328,16 @@ $drilldown-transition: transform 0.15s linear;
 $drilldown-arrows: true;
 $drilldown-arrow-color: $primary-color;
 $drilldown-arrow-size: 6px;
-$drilldown-background: $white;
+$drilldown-background: $dark-gray;
 
 // 17. Dropdown
 // ------------
 
-$dropdown-padding: 1rem;
+$dropdown-padding: 0.2rem;
 $dropdown-background: $body-background;
 $dropdown-border: 1px solid $medium-gray;
 $dropdown-font-size: 1rem;
-$dropdown-width: 300px;
+$dropdown-width: 400px;
 $dropdown-radius: $global-radius;
 $dropdown-sizes: (
   tiny: 100px,
@@ -352,7 +352,7 @@ $dropdownmenu-arrows: true;
 $dropdownmenu-arrow-color: $anchor-color;
 $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-min-width: 200px;
-$dropdownmenu-background: $white;
+$dropdownmenu-background: $dark-gray;
 $dropdownmenu-border: 1px solid $medium-gray;
 
 // 19. Forms
@@ -374,8 +374,8 @@ $form-label-color: $primary-color;
 $form-label-font-size: rem-calc(14);
 $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.8;
-$select-background: $white;
-$select-triangle-color: $dark-gray;
+$select-background: $dark-gray;
+$select-triangle-color: $primary-color;
 $select-radius: $global-radius;
 $input-color: $input-font-color;
 $input-placeholder-color: $medium-gray;
@@ -547,7 +547,7 @@ $switch-paddle-transition: all 0.25s ease-out;
 // 32. Table
 // ---------
 
-$table-background: $white;
+$table-background: $dark-gray;
 $table-color-scale: 5%;
 $table-border: 1px solid smart-scale($table-background, $table-color-scale);
 $table-padding: rem-calc(8 10 10);
@@ -602,6 +602,7 @@ $titlebar-text-font-weight: bold;
 $titlebar-icon-color: $white;
 $titlebar-icon-color-hover: $medium-gray;
 $titlebar-icon-spacing: 0.25rem;
+$titlebar-height-rem: 2.5rem;
 
 // 36. Tooltip
 // -----------
@@ -625,4 +626,4 @@ $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 0.5rem 0.5rem 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
-
+$topbar-height-rem: 2.5rem;

@@ -1,48 +1,102 @@
 // import the CSS framework
+@import "settings";
 @import "foundation";
+
+pre {
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
 
 // top-bar and title-bar customizations
 #title-bar-content {
-  color: #262626;
-  background-color: #E8E8E8;
-
+  color: darken($primary-color, 50%);
+  background-color: $primary-color;
+  background-image: image-url('backgrounds/header-backgroung-dark.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  overflow: hidden;
   text-align: center;
   vertical-align: middle;
-  letter-spacing: 10px;
   margin-right: -1.2em;
   white-space: nowrap;
   font-family: "OCR A Std", monospace;
-  font-size-adjust: 0.58;
-  font-size: 1em; 
-  font-weight: bold;
 
-  height: 1.3em;
+
+  font-size-adjust: 0.58;
+  letter-spacing: 10px;
+  letter-spacing: 3vw;
+  font-size: 1em;
+  font-size: 9vmin;
+  font-weight: bold;
+  margin-right: -1em;
+
+  height: $titlebar-height-rem;
+  height: 10vmin;
   border: 0px;
   padding: 0px;
 }
 
 .top-bar {
+  overflow: hidden;
+  height: $topbar-height-rem;
   //border: 1px solid #00FFFF;
 }
 
+.top-bar-search {
+  height: $topbar-height-rem;
+  white-space: nowrap;
+  overflow: hidden;
+  float: left;
+  padding: none;
+  margin: none;
+
+  input[type=search] {
+    width: 100%;
+    float: left;
+    padding: none;
+    margin: none;
+  }
+
+  input[type=submit] {
+    float: right;
+    padding: none;
+    margin: none;
+
+  }
+
+  #div-padding {
+    display: inline-block;
+    padding: none;
+    margin: none;
+    border: 1px solid #FF0000;
+  }
+}
+
 .top-bar-left {
-  border: 1px solid #FF0000;
+  height: $topbar-height-rem;
+  //border: 1px solid #FF0000;
+
+  float: left;
 }
 
-pre {
- white-space: pre-wrap;       /* css-3 */
- white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
- white-space: -pre-wrap;      /* Opera 4-6 */
- white-space: -o-pre-wrap;    /* Opera 7 */
- word-wrap: break-word;       /* Internet Explorer 5.5+ */
+.top-bar-right {
+  height: $topbar-height-rem;
+  //border: 1px solid #00FF00;
+
+  float: right;
 }
 
-//
-.top-bar-dropdown-button {
-  font-weight: bold;
-  vertical-align: middle;
-  border: 100px;
-  padding: 0px;
+#menu-button.button {
+  //@include button();
+  @include button-style(#E8E8E8, #262626, auto);
+  @include button-dropdown(0.7em, #E8E8E8, 5px);
+  padding: 0.30em 0.45em;
+  text-align: center;
+  display: inline-block;
+  font-size: 25px;
 }
 
 // Custom alert box for Devise
